@@ -1,0 +1,3 @@
+node_modules/
+/enviroment.d.ts
+dist/
