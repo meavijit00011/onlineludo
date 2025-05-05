@@ -375,7 +375,7 @@ export async function RollDice(gameid: string, cid: string, socket: WebSocket) {
         }
         let newGameState: Game = game.game;
         if (allowedToRoll == 'allowed' && pid == activePlayer) {
-            let num = 1;
+            let num = Math.floor((Math.random() * 6) + 1);
             const updatedDiceNums = diceNum;
             updatedDiceNums[activePlayer] = num;
             const whichPiecesCanMove = CheckIfPiecesCanMove(activePlayer, piecesPosOfPlayers[activePlayer], num);
